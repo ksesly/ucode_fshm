@@ -1,0 +1,22 @@
+::placeholder {
+    color: grey;
+}
+
+div {
+    display: flex;
+}
+
+input, button {
+    color: green;
+    height: 2em;
+    padding: 0px 10px 0px 10px;
+}
+
+input:hover, button:hover {
+    color: red;
+}
+
+input {
+    flex: 1;
+}
+
