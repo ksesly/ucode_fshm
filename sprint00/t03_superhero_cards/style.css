@@ -1,0 +1,40 @@
+.main-div {
+    display: flex;
+}
+
+.captain-america {
+    width: 270px;
+    height: 140px;
+    background-image: linear-gradient(#4568dc, #b06ab3);
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.alias {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.name {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 9px;
+    right: 0;
+}
+
+img {
+    height: 182px;
+    position:relative;
+    left: 0;
+    bottom: 47px;
+}
