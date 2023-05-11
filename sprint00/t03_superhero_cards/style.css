@@ -1,40 +1,63 @@
-
-
-.captain-america {
+div:not(.title) {
     width: 270px;
     height: 140px;
-    background-image: linear-gradient(#4568dc, #b06ab3);
     border-radius: 5px;
     float: left;
     margin: 40px;
-    /* position: absolute; */
-    /* display: flex; */
-
+    margin-left: 20px;
+    display: flex;
+    position: relative;
 }
 
 .title {
-    position: absolute;
-    top: 0;
-    right: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    float: right;
+    flex: 1;
+    margin-right: 7px;
 }
 
 .alias {
     color: white;
     font-size: 12px;
     font-weight: 600;
+    margin-bottom: 0;
 }
 
 .name {
-    position: absolute;
     color: rgba(255, 255, 255, 0.5);
     font-size: 9px;
-    right: 0;
+    margin-top: 1px;
 }
 
-img {
+img:not(.spider){
     height: 182px;
-    position:relative;
-    top: -47px;
-    /* bottom: 47px; */
+    position: relative;
+    left: 5px;
+    bottom: 42px;
+}
+
+.spider {
+    height: 182px;
+    position: relative;
+    left: 5px;
+}
+
+.captain-america {
+    background-image: linear-gradient(#4568dc, #b06ab3);
+}
+
+.iron-man {
+    background-image: linear-gradient(#e52d27, #b31217);
+}
+
+.black-widow {
+    background-image: linear-gradient(#000, #61045F);
+}
+
+.spider-man {
+    background-image: linear-gradient(#e52d27, #000);
 }
