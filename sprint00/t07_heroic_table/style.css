@@ -12,3 +12,11 @@ th {
     padding: 10px;
 }
 
+td:first-child {
+    color: white;
+    font-weight: bold;
+}
+
+td:first-child:nth-child(odd) {
+    background-color: rgba(143,148,251, 0);
+}
