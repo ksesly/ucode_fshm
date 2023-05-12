@@ -1,0 +1,49 @@
+span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4095b5;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    font-size: 2em;
+    color: black;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.day {
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    font-family: Loto Bold;
+    font-weight: 700;
+    font-size: 1,5em;
+    width: 120px;
+    
+}
+
+.day:hover {
+    box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.4);
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 120px;
+}
+
+
+
