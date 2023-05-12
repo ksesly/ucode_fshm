@@ -1,0 +1,27 @@
+#telecinesis, #rname, #unknown {
+    margin-top: 20px;
+}
+
+#photo, #rother{
+    margin-bottom: 20px;
+}
+
+div {
+    margin-top: 15px;
+}
+
+.rangee {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+form {
+    border: 2px solid gray;
+    padding: 20px;
+}
+
+fieldset {
+    margin: 15 px;
+    border: 2px solid grey;
+}
