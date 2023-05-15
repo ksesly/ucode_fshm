@@ -1,0 +1,131 @@
+/* ----------structure of the page and main parts---------- */
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(201, 234, 238);
+    font-family: Verdana;
+}
+
+.block {
+    min-height: 270px;
+    background-color: rgb(172, 183, 243);
+    margin: 10px;
+    padding: 5%;
+    border-radius: 1.5%;
+}
+
+
+.section-first, .section-second {
+    display: grid;
+}
+
+/* ----------adaptive width---------- */
+
+@media only screen and (min-width: 320px) {
+    .section-first {
+        grid-template-columns: repeat(1, 325px);
+    }
+    .section-second {
+        grid-template-columns: repeat(1, 490px);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .section-first {
+        grid-template-columns: repeat(2, 325px);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .section-first {
+        grid-template-columns: repeat(3, 325px);
+    }
+        .section-second {
+        grid-template-columns: repeat(2, 490px);
+    }
+}
+
+/* ----------additional for blocks---------- */
+
+.code-ex {
+    font-size: 14px;
+    font-family: Courier New;
+}
+
+.inp-text {
+    font-weight: 600;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 7%;
+    padding: 5px 50px 5px 50px;
+    border: 3px solid black;
+    font-size: 20px;
+    
+}
+
+button:hover {
+    background-color: white;
+    transition: 0.3s;
+    color: black;
+}
+
+.example-background {
+    background-color: blueviolet;
+    color: white;
+    height: auto;
+}
+
+.example-opacity1 {
+    width: 20px;
+    height: 10px;
+    background-color: blue;
+    opacity: 0.8;
+}
+
+.example-opacity2 {
+    width: 20px;
+    height: 10px;
+    background-color: blue;
+    opacity: 0.5;
+}
+
+.example-opacity3 {
+    width: 20px;
+    height: 10px;
+    background-color: blue;
+    opacity: 0.3;
+}
+
+.example-opacity4 {
+    width: 20px;
+    height: 10px;
+    background-color: blue;
+    opacity: 0.1;
+}
+
+.example-line {
+    line-height: 1.5;
+}
+
+.up {
+    text-transform: uppercase;
+}
+
+.example-border {
+    width: 50px;
+    height: 100px;
+    border-bottom: 2px solid #000;
+    background-color: rgb(161, 161, 161);
+}
+
+.example-sizefont {
+    font-size: 24px;
+}
+

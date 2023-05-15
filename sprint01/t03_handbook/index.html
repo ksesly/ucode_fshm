@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Handbook</title>
+    <meta name="description" content="t03. Handbook">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Handbook</h1>
+    <h2>HTML</h2>
+    <div class="section-first">
+        <div class="block">
+            <h3>h1</h3>
+            <p class="inside-text">the h1 to h6 tags are used to define HTML headings</p>
+            <br>
+            <p class="code-ex">&lt;h1&gt;Title&lt;/h1&gt;</p>
+            <h1>TITLE</h1>
+        </div>
+        <div class="block">
+            <h3>table</h3>
+            <p class="inside-text">define an HTML table</p>
+            <br>
+            <p class="code-ex">&lt;table&gt;&lt;/table&gt;</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Country</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="block">
+            <h3>hr</h3>
+            <p class="inside-text">draws a horizontal line</p>
+            <br>
+            <p class="code-ex">&lt;hr&gt;</p>
+            <hr>
+            <p class="example">
+                Lorem ipsum dolor sit amet, consectetuer elit, 
+                sed diem nonnummy nibh <br>
+            </p>
+            <hr>
+        </div>
+        <div class="block">
+            <h3>input</h3>
+            <p class="inside-text">deisgned to create text fields, various buttins,
+                radio buttins and checkboxes
+            </p>
+            <br>
+            <p class="code-ex">&lt;input attributes&gt;</p>
+            <label class="inp-text" for="name">Your name</label>
+            <br>
+            <input type="text" id="name">
+            <br><br>
+            <label class="inp-text">Question</label>
+            <br>
+            <input type="radio" name="answer" id="answer1">
+            <label for="answer1">answer</label>
+            <br>
+            <input type="radio" name="answer" id="answer2">
+            <label for="answer2">answer</label>
+            <br>
+            <input type="radio" name="answer" id="answer3">
+            <label for="answer3">answer</label>
+        </div>
+        <div class="block">
+            <h3>button</h3>
+            <p class="inside-text">clickable button</p>
+            <br>
+            <p class="code-ex">&lt;button&gt;Button&lt;/button&gt;</p>
+            <button>Button</button>
+        </div>
+    </div>
+    <h2>CSS</h2>
+    <div class="section-first">
+        <div class="block">
+            <h3>background</h3>
+            <p class="inside-text">specifies the backgroud of an element</p>
+            <br>
+            <p class="code-ex">background: [];</p>
+            <p class="example-background">Text</p>
+        </div>
+        <div class="block">
+            <h3>opacity</h3>
+            <p class="inside-text">specifies the opacity/transparency of an element</p>
+            <br>
+            <p class="code-ex">opacity: 0.8;</p>
+            <div class="example-opacity1"></div>
+            <div class="example-opacity2"></div>
+            <div class="example-opacity3"></div>
+            <div class="example-opacity4"></div>
+        </div>
+        <div class="block">
+            <h3>line-height</h3>
+            <p class="inside-text">specifies the height of the line</p>
+            <br>
+            <p class="code-ex">line height: 1.5;</p>
+            <p class="example-line">Lorem ipsum dolor <br> Lorem ipsum dolor</p>
+        </div>
+        <div class="block">
+            <h3>text-transform</h3>
+            <p class="inside-text">controls the capitalixation of text</p>
+            <br>
+            <p class="code-ex">text-transform: uppercase;</p>
+            <p class="example-transform"><span class="up">LOREM</span> Ipsum Dolor <span class="up">AMET, CONSECTETUR</span>
+                adipisicing elit, <span class="up">VITAE, DOLORE</span>                 
+            </p>
+        </div>
+        <div class="block">
+            <h3>border</h3>
+            <p class="inside-text">specifies the style of the outline</p>
+            <br>
+            <p class="code-ex">border-bottom: 2px solid #000;</p>
+            <div class="example-border"></div>
+        </div>
+        <div class="block">
+            <h3>font-size</h3>
+            <p class="inside-text">specifies the font size of the item. <br> %, px, rem, inherit</p>
+            <br>
+            <p class="code-ex">font-size: 24px;</p>
+            <p class="example-sizefont">Lorem ipsum dolor sit amet, consectetuer elit, 
+                sed diem nonnummy nibh.</p>
+        </div>
+    </div>
+    <h2>Protocols</h2>
+    <div class="section-second">
+        <div class="block">
+            <h3>HTTP methods</h3>
+            <p> GET - use this type of requests to retrieve resource
+                representation/information only - and not to modify it in any
+                way <br><br>
+                POST - used to create a new resource into the collection of
+                resources <br><br>
+                PUT - use it primarily to update existing resource (if the resource
+                does not exist then API may decide to create a new resource or
+                not) <br><br>
+                DELETE - used to delete resources (identified by the Request-URI) <br><br>
+                PATCH - HTTP PATCH requests are to make partial update on a
+                resource
+        </div>
+        <div class="block">
+            <h3>HTTP status code</h3>
+            <p> 1xx: Informational
+                example: 100 Continue <br><br>
+                2xx: Success
+                example: 201 Created <br><br>
+                3xx: Redirection
+                example: 301 Moved Permanently <br><br>
+                4xx: Client Error
+                example: 404 Not Found <br><br>
+                5xx: Server Error
+                example: 500 Internal Server Error
+            </p>
+        </div>
+        <div class="block">
+            <h3>DNS list by types</h3>
+            <p>A - (address record) - specifies IP address (IPv4) for given host. A
+                records are used for conversion of domain names to
+                corresponding IP addresses  <br><br>
+                AAAA (IPv6 address record) - specifies IPv6 address for given
+                host. So it works the same way as the A record and the
+                difference is the type of IP address <br><br>
+                CNAME (canonical name record) - specifies a domain name that
+                has to be queried in order to resolve the original DNS query.
+                Therefore CNAME records are used for creating aliases of
+                domain names. CNAME records are truly useful when we want
+                to alias our domain to an external domain. In other cases we can
+                remove CNAME records and replace them with A records and
+                even decrease performance overhead <br><br>
+                HINFO (Host Information records) - used to acquire general
+                information about a host. The record specifies type of CPU and
+                OS. The HINFO record data provides the possibility to use
+                operating system specific protocols when two hosts want to
+                communicate. For security reasons the HINFO records are not
+                typically used on public servers <br><br>
+                ISDN (Integrated Services Digital Network records) - specifies
+                ISDN address for a host. An ISDN address is a telephone number
+                that consists of a country code, a national destination code, a
+                ISDN Subscriber number and, optionally, a ISDN subaddress. The
+                function of the record is only variation of the A resource record
+                function <br><br>
+                MX (Mail exchanger record) - specifies a mail exchange server
+                for a DNS domain name. The information is used by Simple Mail
+                Transfer Protocol (SMTP) to route emails to proper hosts.
+                Typically, there are more than one mail exchange server for a
+                DNS domain and each of them have set priority <br><br>
+                NS (name server) - specifies an authoritative name server for
+                given host <br><br>
+                PTR (Reverse-lookup Pointer records) - As opposed to forward
+                DNS resolution (A and AAAA DNS records), the PTR record is
+                used to look up domain names based on an IP address <br><br>
+                SOA (Start of Authority records) - The record specifies core
+                information about a DNS zone, including the primary name
+                server, the email of the domain administrator, the domain serial
+                number, and several timers relating to refreshing the zone <br><br>
+                TXT (Text records) - The text record can hold arbitrary non-
+                formatted text string. Typically, the record is used by Sender
+                Policy Framework (SPF) to prevent fake emails to appear to be
+                sent by you</p>
+        </div>
+        <div class="block">
+            <h3>Identifying google`s IP</h3>
+            <p>To identify google.com IP, follow the next steps: <br><br>
+                1. open Terminal <br>
+                2. paste and run the command nslookup google.com <br><br>
+                As result, you will receive "name" and "address": <br><br>
+                Name: google.com.ua <br>
+                Address: 216.58.215.99 <br><br>
+                Repeat steps 1 and 2 to identify google.com.ua IP</p>
+        </div>
+
+        
+    </div>
+
+
+</body>
+
+</html>
