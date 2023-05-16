@@ -1,10 +1,14 @@
+
+
 body {
     margin: 0;
 }
 
+/* ~~~~~~~~~~cathalog~~~~~~~~~~ */
+
 /* ----------upper-menu---------- */
 
-.header {
+header {
     display: flex;
     flex-direction: row;
     background-color: rgb(156, 80, 80);
@@ -61,7 +65,17 @@ body {
 
 .cathalog-page {
     padding: 1.5%;
+    display: grid;
+    grid-template-areas: 
+        "filter filter"
+        "side good"
+        "foot foot";
 }
+
+.cathalof-filter { grid-area: filter;}
+.list-filters { grid-area: side;}
+.goods { grid-area: good;}
+footer{ grid-area: foot;}
 
 h1 {
     font-size: 40px;
@@ -87,21 +101,22 @@ h1 {
     background-color: black;
 }
 
-/* -----active page----- */
-
-.active-page {
-    display: flex;
-    flex-direction: row;
-}
+/* -----filters----- */
 
 .list-filters {
     display: flex;
     flex-direction: column;
 }
 
+/* custom checkboxes */
+
+
+
+/* slider price */
+
 .slider-price {
     -webkit-appearance: none;
-    width: 100%;
+    width: 200px;
     height: 1px;
     background-color: #d3d3d3;
     outline: none;
@@ -128,4 +143,10 @@ h1 {
     border-radius: 50%;
 }
 
-/* ----------card---------- */
+/* -----goods----- */
+
+
+/* ----------footer---------- */
+
+
+/* ~~~~~~~~~~card~~~~~~~~~~ */
