@@ -177,6 +177,21 @@ input:checked + .slider:before {
 }
 
 /* ----------size---------- */
+.size-signs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+
+.big-A {
+    font-size: 20px;
+    margin: 0;
+}
+
+ .small-a {
+    margin: 0;
+ }
 
 .slider-size {
     -webkit-appearance: none;
