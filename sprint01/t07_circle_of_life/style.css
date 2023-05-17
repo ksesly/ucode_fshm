@@ -1,0 +1,23 @@
+body {
+    width: 100%;
+}
+
+div {
+    position: relative;
+    animation:circ 3s linear 1s infinite alternate;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: brown;
+    margin-top: 300px;
+}
+
+
+@keyframes circ {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: calc(100% - 350px);
+    }
+}
