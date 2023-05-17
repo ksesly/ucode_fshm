@@ -9,8 +9,13 @@ div {
     height: 300px;
     border-radius: 50%;
     background-color: brown;
+    transition: background-color 2s;
     margin-top: 300px;
 }
+
+div:hover {
+    background-color: aquamarine;
+} 
 
 
 @keyframes circ {
