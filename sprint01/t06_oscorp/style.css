@@ -12,7 +12,7 @@ body, .catalog {
 header {
     /* display: flex; */
     flex-direction: row;
-    background-color: rgb(156, 80, 80);
+    background-color: black;
     height: 4em;
     color: white;
     justify-content: space-between;
@@ -53,7 +53,7 @@ header {
 
 .path-menu {
     margin: 0;
-    background-color: rgb(122, 196, 196);
+    background-color: #EC6000;
 }
 
 .path {
@@ -63,7 +63,11 @@ header {
 
 .home-path-menu {
     margin-left: 1%;
-    color: brown;
+    color: white;
+}
+
+.other-path-menu {
+    color: white;
 }
 
 /* ----------cathalog-page---------- */
@@ -78,8 +82,57 @@ header {
         margin-top: 1.5%;
 }
 
-
 @media only screen and (min-width: 320px) {
+    .cathalog-page {
+        grid-template-areas: 
+        "filter"
+        "side"
+        "good";
+    }
+    header {
+        display: none;
+    }
+    .goods {
+        grid-template-columns: 100%;
+    }
+    .list-filters {
+        flex-direction: row;
+    }
+    footer {
+        height: 5em;
+    }
+    .price {
+        margin-left: 50px;
+    }
+    .product-page {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-product {
+        margin-top: 0;
+        margin-left: 5%;
+        text-align: center;
+    }
+    .product-image-div {
+        margin-bottom: 0px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 95%;
+        /* width: 400px; */
+        height: 400px;
+    }
+    .product-image {
+        /* width: 400px; */
+        height: 400px;
+        width: 95%;
+    }
+    .comment {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
     .cathalog-page {
         grid-template-areas: 
         "filter"
@@ -96,10 +149,41 @@ header {
     .list-filters {
         flex-direction: row;
     }
+    footer {
+        height: 5em;
+    }
+    .price {
+        margin-left: 50px;
+    }
+    .product-page {
+        flex-direction: column;
+    }
+    .about-product {
+        justify-content: center;
+        margin-top: 0;
+        margin-left: 5%;
+        text-align: center;
+        width: 100%;
+    }
+    .product-image-div {
+        margin-bottom: 0px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 400px;
+        height: 400px;
+    }
+    .product-image {
+        width: 400px;
+        height: 400px;
+        
+    }
+    .comment {
+        width: 100%;
+    }
 
 }
 
- @media only screen and (min-width: 768px) {
+ @media only screen and (min-width: 1024px) {
     .cathalog-page {
         grid-template-areas: 
         "filter filter"
@@ -113,7 +197,6 @@ header {
     .goods {
         grid-template-columns: 50% 49%;
         grid-template-rows: 47% 47% 6%;
-        /* grid-template-rows: 49% 49%; */
     }
     .list-filters {
         flex-direction: column;
@@ -122,13 +205,33 @@ header {
         grid-column-start: 1;
         grid-column-end: 3;
     }
-
+    footer {
+        height: 30em;
+    }
+    .price {
+        margin-left: 0px;
+    }
+    .product-page {
+        flex-direction: row;
+    }
+    .about-product {
+        margin-top: 10%;
+        margin-left: 3%;
+        text-align: start;
+    }
+    .product-image {
+        width: 500px;
+        height: 500px;
+    }
+    .product-image-div {
+        margin: 5%;
+        width: 500px;
+        height: 500px;
+    }
 } 
 
 .cathalog-filter {
     grid-area: filter;
-    /* display: flex; */
-    /* flex-direction: row;  */
 }
 
 .pages {
@@ -214,7 +317,7 @@ h1 {
     appearance: none;
     width: 25px;
     height: 25px;
-    background-color: #04AA6D;
+    background-color: black;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -222,7 +325,7 @@ h1 {
 .slider-price::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    background: #04AA6D;
+    background: black;
     cursor: pointer;
     border-radius: 50%;
 }
@@ -238,18 +341,15 @@ h1 {
     width: 100%;
     height: 200px;
     border-radius: 40px;
-    /* background-color: rgb(235, 235, 235); */
     display: flex;
     align-items: center;
-    /* padding: 4%; */
 }
 
 .for-image {
-    width: 40%;
-    height: 87%;
+    width: 35%;
+    height: 80%;
     display: flex;
-    /* position: relative; */
-    background-color: rgb(114, 147, 175);
+    background-color: #21455E;
     border-radius: 40px;
     margin-left: 2.5%;
     justify-content: center; 
@@ -257,10 +357,7 @@ h1 {
 }
 
 img {
-    /* position: absolute; */
-    /* width: 180px;
-    height: 180px; */
-    width: 100%;
+    width: 90%%;
     height: 100%;
 }
 
@@ -299,7 +396,7 @@ footer {
     background-color: black;
     color: white;
     display: flex;
-    height: 30em;
+    /* height: 30em; */
 }
 
 footer p {
@@ -307,9 +404,65 @@ footer p {
     align-items: center;
 }
 
-
-/* .inside-footer {
-    
-} */
-
 /* ~~~~~~~~~~card~~~~~~~~~~ */
+
+.product-page {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.product-image-div {
+    background-color: #21455E;
+    border-radius: 40px;
+}
+
+
+
+.about-product {
+    display: flex;
+    flex-direction: column;
+}
+
+.pakun {
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.product-buy {
+    padding: 10px 40px 10px 40px;
+    background-color: black;
+    color: white;
+    width: 200px;
+    border-radius: 40px;
+}
+
+.aboutt {
+    width: 80%;
+}
+
+.comment {
+    height: auto;
+    width: 40%;
+    display: flex;
+    padding: 10px;
+    background-color: rgba(236, 96, 0, 0.5);
+    border: 1px solid black;
+    margin-bottom: 5%;
+}
+
+.comment-text {
+    margin-left: 2%;
+}
+
+
+h4, .user-comment {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.user {
+    height: 50px;
+    width: 50px;
+}
