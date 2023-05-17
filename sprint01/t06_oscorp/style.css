@@ -1,6 +1,7 @@
 
 
-body {
+body, .catalog {
+    height: 100%;
     margin: 0;
 }
 
@@ -9,12 +10,14 @@ body {
 /* ----------upper-menu---------- */
 
 header {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     background-color: rgb(156, 80, 80);
     height: 4em;
     color: white;
     justify-content: space-between;
+    align-items: center;
+    /* display: none; */
 }
 
 .menu-bar, .info-bar {
@@ -33,6 +36,7 @@ header {
 
 .logo {
     width: 200px;
+    height: 50px;
     background-color: antiquewhite;
 }
 
@@ -64,21 +68,66 @@ header {
 /* ----------cathalog-page---------- */
 
 .cathalog-page {
-    padding: 1.5%;
     display: grid;
     grid-template-areas: 
         "filter filter"
         "side good"
         "foot foot";
+        margin: 2.5%;
+        margin-top: 1.5%;
 }
 
-.cathalof-filter { grid-area: filter;}
-.list-filters { grid-area: side;}
+
+@media only screen and (min-width: 320px) {
+    .cathalog-page {
+        grid-template-areas: 
+        "filter"
+        "side"
+        "good";
+    }
+    header {
+        display: none;
+    }
+    .goods {
+        grid-template-columns: auto;
+        /* grid-template-columns: auto; */
+    }
+
+}
+
+ @media only screen and (min-width: 768px) {
+    .cathalog-page {
+        grid-template-areas: 
+        "filter filter"
+        "side good";
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 25% 75%;
+    }
+    header {
+        display: flex;
+    }
+    .goods {
+        grid-template-columns: 50% 49%;
+        /* grid-template-rows: 49% 49%; */
+    }
+
+} 
+
+.cathalog-filter {
+    grid-area: filter;
+    display: flex;
+    flex-direction: row; 
+}
+.list-filters { 
+    grid-area: side;
+    width: 30%;
+}
 .goods { grid-area: good;}
-footer{ grid-area: foot;}
 
 h1 {
     font-size: 40px;
+    margin: 0;
+    margin-bottom: 3px;
 }
 
 /* -----active filters----- */
@@ -92,7 +141,7 @@ h1 {
 .filter-icon {
     text-align: center;
     width: 70px;
-    margin-top: 0;
+    margin-top: 15px;
     margin-right: 2.5em;
     border: 1px solid black;
     padding: 10px 30px 10px 30px;
@@ -104,7 +153,7 @@ h1 {
 /* -----filters----- */
 
 .list-filters {
-    display: flex;
+    display: flex;;
     flex-direction: column;
 }
 
@@ -145,8 +194,79 @@ h1 {
 
 /* -----goods----- */
 
+.goods {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.good-banner { 
+    width: 100%;
+    height: 200px;
+    border-radius: 40px;
+    /* background-color: rgb(235, 235, 235); */
+    display: flex;
+    align-items: center;
+    /* padding: 4%; */
+}
+
+.for-image {
+    width: 40%;
+    height: 87%;
+    display: flex;
+    position: relative;
+    background-color: rgb(114, 147, 175);
+    border-radius: 40px;
+    margin-left: 2.5%;
+    justify-content: center; 
+    align-items: center;
+}
+
+img {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+}
+
+.good-name {
+    font-size: 15px;
+}
+
+.good-price { 
+    font-weight: 800;
+}
+
+.good-avaliability {
+    font-size: 12px;
+}
+
+.about-goods {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.good-buy {
+    padding: 10px 40px 10px 40px;
+    background-color: black;
+    color: white;
+    width: 85%;
+    border-radius: 40px;
+
+}
 
 /* ----------footer---------- */
 
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 5%;
+}
+
+/* .inside-footer {
+    
+} */
 
 /* ~~~~~~~~~~card~~~~~~~~~~ */
