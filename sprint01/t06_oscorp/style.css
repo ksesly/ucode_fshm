@@ -37,7 +37,8 @@ header {
 .logo {
     width: 200px;
     height: 50px;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    margin-left: 1%;
 }
 
 .number-bar {
@@ -89,8 +90,11 @@ header {
         display: none;
     }
     .goods {
-        grid-template-columns: auto;
-        /* grid-template-columns: auto; */
+        grid-template-columns: 100%;
+        /* grid-template-row: auto; */
+    }
+    .list-filters {
+        flex-direction: row;
     }
 
 }
@@ -101,23 +105,49 @@ header {
         "filter filter"
         "side good";
         grid-template-columns: 25% 75%;
-        grid-template-rows: 25% 75%;
+        grid-template-rows: 20% 75%;
     }
     header {
         display: flex;
     }
     .goods {
         grid-template-columns: 50% 49%;
+        grid-template-rows: 47% 47% 6%;
         /* grid-template-rows: 49% 49%; */
+    }
+    .list-filters {
+        flex-direction: column;
+    }
+    .pages {
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 
 } 
 
 .cathalog-filter {
     grid-area: filter;
-    display: flex;
-    flex-direction: row; 
+    /* display: flex; */
+    /* flex-direction: row;  */
 }
+
+.pages {
+    display: flex;
+    justify-content: center;
+
+}
+
+.pages-arrows {
+    font-weight: 900 ;
+}
+
+.pages-num {
+    background-color: rgb(196, 196, 196);
+    border-radius: 50px;
+    color: black;
+    padding: 5px 15px 5px 15px;
+}
+
 .list-filters { 
     grid-area: side;
     width: 30%;
@@ -154,7 +184,12 @@ h1 {
 
 .list-filters {
     display: flex;;
-    flex-direction: column;
+    
+}
+
+.one-filt {
+    display: flex;
+    flex-direction: row;
 }
 
 /* custom checkboxes */
@@ -213,7 +248,7 @@ h1 {
     width: 40%;
     height: 87%;
     display: flex;
-    position: relative;
+    /* position: relative; */
     background-color: rgb(114, 147, 175);
     border-radius: 40px;
     margin-left: 2.5%;
@@ -222,9 +257,11 @@ h1 {
 }
 
 img {
-    position: absolute;
-    width: 180px;
-    height: 180px;
+    /* position: absolute; */
+    /* width: 180px;
+    height: 180px; */
+    width: 100%;
+    height: 100%;
 }
 
 .good-name {
@@ -262,8 +299,14 @@ footer {
     background-color: black;
     color: white;
     display: flex;
-    height: 5%;
+    height: 30em;
 }
+
+footer p {
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* .inside-footer {
     
