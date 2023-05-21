@@ -48,23 +48,14 @@ while (age == null) {
 }
 
 
-if  (RegExp('^male', 'i').test(gender)) {
-    if(age < 19) 
-        alert(`${animal}-boy!`);
-    else 
-        alert(`${animal}-man!`);
+if (RegExp('^male', 'i').test(gender)) {
+    age < 19 ? alert(`${animal}-boy!`) : alert(`${animal}-man!`);
 }
 else if (RegExp('^female', 'i').test(gender)) {
-    if (age < 19)
-        alert(`${animal}-girl!`);
-    else
-        alert(`${animal}-woman!`);
+    age < 19 ? alert(`${animal}-girl!`) : alert(`${animal}-woman!`);
 }
 else if (RegExp('^$', 'i').test(gender)) {
-    if (age < 19)
-        alert(`${animal}-kid!`);
-    else
-        alert(`${animal}-hero!`);
+    age < 19 ? alert(`${animal}-kid!`) : alert(`${animal}-hero!`);
 }
 
 
