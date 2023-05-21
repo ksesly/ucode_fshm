@@ -20,7 +20,7 @@ let obj = {
     second: 'Wave'
 }
 
-let sym = Symbol('k');  // Symbol и как его вывести? 
+let sym = Symbol('k');  // Symbol не выводиться нормально с alert(), можно через туСтринг
 
 function f() {} // Function
 
