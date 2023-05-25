@@ -119,37 +119,3 @@ console.log(coinCollection);
 console.log(coinCollection.size);
 
 
-
-
-
-
-
-
-
-
-
-
-
-// const coinCollection = new Set();
-
-// coinCollection.add('mishka');
-// coinCollection.add('katjushka');
-// coinCollection.add('davidushka');
-// coinCollection.add('humus');
-
-// console.log(coinCollection);
-// // [ "mishka", "katjushka", "davidushka", "humus" ]
-
-// coinCollection.delete('davidushka');
-// console.log(coinCollection);
-// // [ "mishka", "katjushka", "humus" ]
-
-// for (const value of coinCollection) console.log(value);
-// // mishka 
-// // katjushka 
-// // humus
-
-// console.log(coinCollection.has('mishka'));
-// // true
-
-
