@@ -3,25 +3,25 @@ class Timer {
         this.title = title;
         this.delay = delay;
         this.stopCount = stopCount;
-        this.currentCount = 0;
+        this.currentCount = stopCount;
         this.intervalId = null;
     }
 
     start() {
-        console.log(`Timer '${this.title}' started.`);
+        console.log(`Timer ${this.title} started (delay=${this.delay}, stopCount=${this.stopCount})`);
         this.intervalId = setInterval(() => this.tick(), this.delay);
     }
 
     tick() {
-        this.currentCount++;
-        console.log(`Tick (${this.title}) ${this.currentCount}`);
-        if (this.currentCount === this.stopCount) 
-            this.stop();   
+        this.currentCount--; 
+        console.log(`Timer ${this.title} Tick! | cycles left ${this.currentCount}`);
+        if (this.currentCount == 0) 
+            this.stop();  
     }
 
     stop() {
         clearInterval(this.intervalId);
-        console.log(`Timer '${this.title}' stopped after ${this.currentCount} cycles.`);
+        console.log(`Timer ${this.title} stopped`);
         this.currentCount = 0;
         this.intervalId = null;
     }
@@ -35,7 +35,8 @@ function runTimer(id, delay, counter) {
 
 
 
-runTimer("Bleep", 1000, 5);
+// runTimer("Bleep", 1000, 5);
+
 /*
 Console output:
 
