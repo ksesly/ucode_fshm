@@ -13,7 +13,6 @@ function prompting() {
         console.error('Invalid number!');
     if (number > 10000) 
         number = 1;
-
 }
 
 
