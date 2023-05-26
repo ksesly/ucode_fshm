@@ -62,8 +62,7 @@ let houseMixin = {
             decryptedArr.push(decryptedChar);
         }
         this.description = decryptedArr.join('');
-    }
-    
+    } 
 }
 
 
