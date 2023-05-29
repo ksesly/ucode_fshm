@@ -34,7 +34,7 @@ class Human {
             this.feeding = true;
             this.calories = +this.calories + 200;
             document.getElementById('calories').innerHTML = this.calories;
-            document.querySelector('.container .info').innerHTML = 'Nom nom nom';
+ document.querySelector('.container .info').innerHTML = 'Nom nom nom';           
             setTimeout(() => {
                 document.querySelector('.container .info').innerHTML = '';
                 if (this.calories > 0 && this.calories < 500) {
