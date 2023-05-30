@@ -1,0 +1,15 @@
+.stone {
+    transform: rotate(45deg);
+    border-radius: 5px;
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    margin: 40px;
+}
+
+#yellow { background-color: yellow;}
+#green { background-color: green;}
+#blue {background-color: blue;}
+#pink {background-color: pink;}
+#purple {background-color: purple;}
+#red {background-color: red;}
