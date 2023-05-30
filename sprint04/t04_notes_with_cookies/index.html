@@ -7,8 +7,18 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="">
-
+        <div class="form">
+            <div class="add-clear-buttons">
+                <button class="add-button" onclick="addToArchive()">Add to cookies</button>
+                <button class="clear-button" onclick="clearfromArchive()">Clear cookies</button>
+            </div>
+            <br><br>
+            <label for="text-input">Text input:</label>
+            <br><br>
+            <textarea id="text-input" cols="70" rows="5" maxlength="500"></textarea>
+            <br><br><br>
+            <label>Note archive:</label>
+            <div class="for-notes"></div>
         </div>
         <script src="js/script.js"></script>
     </body>
