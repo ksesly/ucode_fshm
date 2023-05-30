@@ -1,0 +1,32 @@
+body {
+	margin: 50px;
+	font-family:'Courier New', Courier, monospace;
+}
+
+.form {
+	width: 520px;
+}
+
+.add-clear-buttons {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+button {
+	border: 3px solid rgb(74, 161, 132);
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: white;
+	font-size: 15px;
+	font-weight: 600;
+	transition: background-color 0.5s;
+	font-family:'Courier New', Courier, monospace;
+}
+
+button:hover {
+	background-color: rgb(74, 161, 132);
+	color: white;
+	transition: 0.5s;
+}
+
