@@ -1,0 +1,10 @@
+body {
+    overflow-y: scroll; 
+	display: flex;
+	flex-direction: column;
+}
+
+.lzy_img {
+	margin: 30px;
+}
+      
