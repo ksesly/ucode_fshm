@@ -1,4 +1,4 @@
-let key = 'f5ff64b37a1e5727c406056b42a4aa4d';
+let key = '172b13debe107fff5df98628c6db121d';
 let latitude = 49.988358;
 let longitude = 36.232845;
 let api = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=daily&appid=${key}`;

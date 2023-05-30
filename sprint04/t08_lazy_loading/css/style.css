@@ -6,5 +6,6 @@ body {
 
 .lzy_img {
 	margin: 30px;
+	background: url('assets/images/load.gif');
 }
       
