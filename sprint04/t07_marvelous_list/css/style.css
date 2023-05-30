@@ -1,0 +1,66 @@
+body {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+h1{
+	text-align: center;
+}
+
+.film-list {
+	display: flex;
+	width: 700px;
+	height: 400px;
+	background-color: rgb(217, 217, 217);
+	margin-left: calc(50% - 350px);
+}
+
+.list {
+	width: 130px;
+	background-color: rgb(227, 227, 227);
+}
+
+.film-name {
+	margin-left: 10%;
+	padding: 10px 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.film-name:hover {
+	background-color: rgb(217, 217, 217);;
+}
+
+.film-name:active {
+	border-left: 3px solid blue;
+}
+
+.film-page1, .film-page2, .film-page3 { 
+	display: flex;
+}
+
+.info {
+	margin: 20px;
+}
+
+.actors { 
+	display: flex;
+}
+
+.actor {
+	padding: 10px 20px;
+	background-color: aquamarine;
+	margin: 0 10px 0 0;
+	border-radius: 5px;   
+}
+
+img {
+	width: 200px ;
+	height: 250px;
+	margin: 10px 10px 0 0;
+}
+
+.film-page2, .film-page3 {
+	display: none;
+}
