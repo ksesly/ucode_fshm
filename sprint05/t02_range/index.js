@@ -19,4 +19,4 @@ module.exports = { checkDivision(a = 1, b = 60) {
             a++;
         }
     }
-}
+};

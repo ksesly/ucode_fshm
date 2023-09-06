@@ -9,4 +9,4 @@ module.exports =  { firstUpper(str) {
 		}
 		return result;
     }
-}
+};
