@@ -27,3 +27,4 @@ module.exports = class StrFrequency {
         return this.str.split('').reverse().join('');
     };
 };
+
