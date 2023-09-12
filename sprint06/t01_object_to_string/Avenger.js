@@ -22,7 +22,6 @@ module.exports = class Avengers extends Func {
         this.alias = alias;
         this.gender = gender;
         this.age = age;
-        // this.temp = [];
         this.powers = powers;
     }
 
