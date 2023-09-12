@@ -14,7 +14,6 @@ const server = http.createServer((req, res) => {
     const clientIpAddress = req.connection.remoteAddress;
     const queryParams = parsedUrl.query;
 
-    // Log the information
     console.log('Name of executed script:', scriptFileName);
     console.log('Arguments passed to the script:', scriptArguments);
     console.log('IP address of the server:', serverIpAddress);
