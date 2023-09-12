@@ -3,7 +3,7 @@
   Task name: Object to string
 */
 
-const {Avenger} = require("./Avenger");
+const Avenger = require("./Avenger");
 
 const stark = new Avenger({
   name: 'Tony Stark',
