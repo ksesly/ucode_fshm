@@ -1,0 +1,31 @@
+
+<meta charset="UTF-8">
+<title><!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Avengers Recruitment</title>
+<body>
+<h1>Avengers Recruitment</h1>
+<form id="recruitment-form" action="/submit" method="POST" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br>
+
+    <label for="description">Tell us about yourself:</label><br>
+    <textarea id="description" name="description" rows="4" required></textarea><br>
+
+    <label for="photo">Upload a photo:</label>
+    <input type="file" id="photo" name="photo" accept="image/*" required><br>
+
+    <button type="submit">Apply</button>
+</form>
+</body>
+</html>
