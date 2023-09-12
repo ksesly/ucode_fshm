@@ -3,8 +3,8 @@
   Task name: Try, catch
 */
 
-const {Product} = require("./product");
-const {Ingestion} = require("./ingestion");
+const Product = require("./product");
+const Ingestion = require("./ingestion");
 const productNames = [
   'Nutella',
   'Chicken',
