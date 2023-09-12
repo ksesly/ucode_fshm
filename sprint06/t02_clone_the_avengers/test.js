@@ -3,8 +3,8 @@
   Task name: Clone the Avengers
 */
 
-const {Team} = require('./Team');
-const {Avenger} = require('./Avenger');
+const Team = require('./Team');
+const Avenger = require('./Avenger');
 const array = []
 
 array[0] = new Avenger('Tony Stark', 'Iron Man', 'man', 38,
