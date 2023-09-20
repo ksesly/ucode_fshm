@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Heroic form</title>
+        <style>
+            #telecinesis, #rname, #unknown { margin-top: 20px; }
+
+            #photo, #rother{ margin-bottom: 20px; }
+
+            div { margin-top: 15px; }
+
+            .rangee {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+            }
+
+            form {
+                border: 2px solid gray;
+                padding: 20px;
+            }
+
+            fieldset {
+                margin: 15 px;
+                border: 2px solid grey;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Superhero form</h1>
+        <form action="/hero-form" method="post">
+            <fieldset class="about-super">
+                <legend>About the Superhero</legend>
+
+                <label for="rname">Real name</label>
+                <input type="text" placeholder="Superhero real name" id="rname" name="heroRealName" autofocus>
+
+                <label for="alias">Superhero name</label>
+                <input type="text" placeholder="Superhero alias" id="alias" name="heroAlias">
+
+                <label for="age">Age</label>
+                <input type="number" id="age" min="1" max="999" step="1" name="heroAge">
+
+                <br><br>
+
+                <label for="about">About</label>
+                <textarea name="heroDescription" id="about" placeholder="Information about the suoerhero, max 500 symbols" cols="70" rows="5" maxlength="500" ></textarea>
+
+                <br><br>
+
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="heroPhoto">
+
+            </fieldset>
+            <fieldset>
+                <legend>Powers</legend>
+
+                <input type="checkbox" id="telecinesis" name="powers"> 
+                <label for="telecinesis">Telecinesis</label>
+
+                <input type="checkbox" id="strensth-speed" name="powers"> 
+                <label for="strensth-speed">Super strength or speed</label>
+
+                <input type="checkbox" id="shape" name="powers"> 
+                <label for="shape">Shapeshifting</label>
+
+                <input type="checkbox" id="fligth" name="powers"> 
+                <label for="fligth">Flight</label>
+
+                <input type="checkbox" id="elemental" name="powers"> 
+                <label for="elemental">Elemental control</label>
+
+                <input type="checkbox" id="other" name="powers"> 
+                <label for="other">Other</label>
+
+                <br><br>
+                <div class="rangee">
+                    <label id="lvl" for="level">Level of control:</label>
+                    <input type="range" id="level" min="0" max="10" step="1" value="1" name="heroLevel">
+                </div>
+
+            </fieldset>
+            <fieldset>
+                <legend>Origin of Powers</legend>
+
+                <input type="radio" name="rad" id="unknown">
+                <label for="unknown">Unknown</label>
+
+                <input type="radio" name="rad" id="lab-accident">
+                <label for="lab-accident">Freak lab accident</label>
+
+                <input type="radio" name="rad" id="ancient-wise">
+                <label for="ancient-wise">Chosen by ancient wise being</label>
+
+                <input type="radio" name="rad" id="not-human">
+                <label for="not-human">The superhero is not human</label>
+
+                <input type="radio" name="rad" id="rother">
+                <label for="rother">Other</label>
+
+            </fieldset>
+
+            <div>
+                <input id="but1" type="reset" value="CLEAR">
+                <input type="submit" value="SEND">
+            </div>
+
+        </form>
+    </body>
+</html>
