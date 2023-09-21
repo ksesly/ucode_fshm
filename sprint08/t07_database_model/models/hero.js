@@ -1,45 +1,46 @@
 const Model = require('../model');
 
-module.exports = class Hero extends Model {
-    model = "heroes";
-    constructor(id, name, class_role, race_id){
-        this.id = id;
-        this.name = name;
-        this.class_role = class_role;
-        this.race_id = race_id;
+class Hero extends Model {
+    constructor(table_name = 'heroes', name, description, class_role, race_id = 'human') {
+		super(table_name, { name, description, class_role, race_id });
     }
-    find(id){
-        super.find(id);
+    find(id) {
+        return super.find(id);
     }
-    delete(id){
-        super.delete(id);
+    delete(id) {
+        return super.delete(id);
     }
-    save(){
-        var buff = {};
-        db.query(`SELECT * FROM ${model} WHERE id=${this.id}`, (err, result) => {
-            if (result){
-                buff = result;
-            }
-            if (err){
-                console.log(err);
-                exit();
-            }
-        });
-        if (buff.length > 0){
-            db.query(`UPDATE ${model} SET id=${this.id}, name=${this.name}, class_role=${this.class_role}, race_id=${this.race_id}`, (err, result) => {
-                if (err) {
-                    console.log(err);
-                    exit();
-                }
-            });
-        }
-        else {
-            db.query(`INSERT INTO ${model}(id, name, class_role, race_id) VALUES (${this.id}, ${this.name}, ${this.class_role}, ${this.race_id})`, (err, result) => {
-                if (err){
-                    console.log(err);
-                    exit();
-                }
-            })
-        }
+    save() {
+        return super.save();
     }
 }
+module.exports = Hero;
+
+// const ks = new Hero('heroes','Ksushka pushka', 'push', 'tankman', null);
+
+// console.log('Testing find method for Hero...');
+// ks.find(11)
+//     .then((result) => {
+//         console.log('Found result:', result);
+//     })
+//     .catch((error) => {
+//         console.error('Find failed:', error);
+//     });
+
+// console.log('Testing save method for Hero...');
+// ks.save()
+//   .then((result) => {
+//     console.log('Save result:', result);
+//   })
+//   .catch((error) => {
+//     console.error('Save failed:', error);
+//   });
+
+// console.log('Testing delete method for Hero...');
+// ks.delete(11)
+//   .then(() => {
+//     console.log('Delete successful');
+//   })
+//   .catch((error) => {
+//     console.error('Delete failed:', error);
+//   });
