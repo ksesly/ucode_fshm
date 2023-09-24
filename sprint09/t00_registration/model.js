@@ -2,7 +2,7 @@ const pool = require("./db");
 
 class Model {
     constructor(table_name, attributes) {
-        this.table_name = table_name || 'heroes';
+        this.table_name = table_name || 'users';
         this.attributes = attributes || {};
     }
 
@@ -71,7 +71,7 @@ class Model {
 
 module.exports = Model;
 
-// const modelInstance = new Model('heroes', { name: 'Ksushka pushka', description: 'push' });
+// const modelInstance = new Model('users', { name: 'Ksushka pushka', description: 'push' });
 
 // console.log('Testing find method...');
 // modelInstance.find(11)
