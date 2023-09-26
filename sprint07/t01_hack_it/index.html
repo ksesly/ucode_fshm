@@ -5,9 +5,8 @@
     <title>Password Page</title>
 </head>
 <body>
-    <h1>Password Page</h1>
     
-    <form action="/save-password" method="post">
+    <form action="/" method="post">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
 
@@ -17,21 +16,8 @@
         <input type="submit" value="Save">
     </form>
 
-    {{#hashedPassword}}
-    <h2>Hashed Password with Salt:</h2>
-    <p>{{hashedPassword}}</p>
+   
 
-    <form action="/guess-password" method="post">
-        <label for="guess">Guess the Password:</label>
-        <input type="password" id="guess" name="guess" required>
-
-        <input type="submit" value="Submit Guess">
-    </form>
-    {{/hashedPassword}}
-
-    {{#message}}
-    <p style="color: {{color}};">{{message}}</p>
-    {{/message}}
 
     <form action="/clear-session" method="post">
         <input type="submit" value="Clear Session">
