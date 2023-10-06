@@ -6,12 +6,16 @@
 </head>
 <body>
     <h2>Password</h2>
-    <form action="/save" method="post">
-        <label for="password">Password for saving to session: </label>
+    <br/>
+    <label style="color: green">Hacked!</label>
+    <br/>
+    <br/>
+    <form method="post" action="/save">
+        <label for="password">Password: </label>
         <input name="password" type="password" id="password" placeholder="Enter password" required>
         <br/>
         <br/>
-        <label for="salt">Salt for saving to session: </label>
+        <label for="salt">Salt: </label>
         <input name="salt" type="text" id="salt" placeholder="Enter salt" required>
         <br/>
         <br/>

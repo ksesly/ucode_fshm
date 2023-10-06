@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>t09</title>
+    </head>
+        
+    <body>
+        <h1>Notes App</h1>
+            
+        <form action="/addNote" method="post">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <br/>
+            <select id="importance" name="importance">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <br/>
+            <textarea id="content" name="content" placeholder="Text of note..." required></textarea>
+            <br/>
+            <button type="submit">Create</button>
+        </form>
+
+        <h2>Saved Notes</h2>
+        <ul></ul>
+    </body>
+</html>

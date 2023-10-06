@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charset</title>
+  </head>
+  <body>
+    <h1>Charset</h1>
+    <form action="" method="post">
+      <span>Change charset</span>
+      <input type="text" name="string" id="string" / required>
+
+      <span>Select charset or several charsets</span>
+      <select name="type" id="type" multiple>
+        <option selected name="utf8" value="utf8">UTF-8</option>
+        <option name="ISO-8859-1" value="ISO-8859-1">ISO-8859-1</option>
+        <option name="win1252" value="win1252">Windows-1252</option>
+      </select>
+
+      <button type="submit">Change charset</button>
+      <button type="reset">Clear</button>
+    </form>
+
+    <script src="index.js"></script>
+  </body>
+</html>

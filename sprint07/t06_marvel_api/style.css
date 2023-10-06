@@ -1,0 +1,12 @@
+div {
+    width: 100%;
+    border: 1px solid red;
+    color: lightblue;
+    padding: 10px;
+    background-color: #222;
+    margin: 2px;
+}
+
+span {
+    color: green;
+}
