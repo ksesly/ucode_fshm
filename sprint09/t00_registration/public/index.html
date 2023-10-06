@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Registration Form</title>
+		<link rel="stylesheet" href="/style.css" />
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				let registrationForm = document.getElementById('registrationForm');
+				let errorDiv = document.querySelector('#errorDiv');
+				registrationForm.addEventListener('submit', async (action) => {
+					action.preventDefault();
+
+					let pwd = document.querySelector('#password');
+					let confirmPwd = document.querySelector('#confirmPassword');
+
+					if (pwd.value !== confirmPwd.value) {
+						errorDiv.innerHTML = 'Password and Confirm password dont match :#';
+						return;
+					}
+
+					errorDiv.innerHTML = '';
+					try {
+						const formData = new FormData(registrationForm);
+						// console.log(formData.get('login'));
+						const res = await fetch('/register', {
+							method: 'POST',
+							body: JSON.stringify({
+								login: formData.get('login'),
+								fullname: formData.get('fullname'),
+								email: formData.get('email'),
+								password: formData.get('password'),
+							}),
+							headers: new Headers({
+								'Content-Type': 'application/json; charset=UTF-8',
+							}),
+						});
+
+						const data = await res.json();
+						if (data.status === 200) {
+							let successDiv = document.querySelector('#successDiv');
+							successDiv.innerHTML = 'Success :)';
+							registrationForm.reset();
+						} else errorDiv.innerHTML = data.message;
+					} catch (error) {
+						errorDiv.innerHTML = error;
+						console.error('Error:', error);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Registration Form</h1>
+		<form id="registrationForm" action="/register" method="POST">
+			<label for="login">Login</label>
+			<input type="text" id="login" name="login" required /><br /><br />
+
+			<label for="fullname">Full Name</label>
+			<input type="text" id="fullname" name="fullname" required /><br /><br />
+
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" required /><br /><br />
+
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" required /><br /><br />
+
+			<label for="confirmPassword">Confirm Password</label>
+			<input type="password" id="confirmPassword" name="confirmPassword" required /><br /><br />
+
+			<div id="errorDiv" class="errorDiv"></div>
+
+			<input type="submit" value="Register" />
+		</form>
+		<div id="successDiv"></div>
+	</body>
+</html>

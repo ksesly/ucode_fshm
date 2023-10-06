@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Log in form</title>
+		<!-- <link rel="stylesheet" href="/style.css" /> -->
+		<script>
+			const check = async () => {
+				let cookies = document.cookie;
+				if (cookies.authorization) {
+					const res = await fetch('/login', {
+						method: GET,
+						headers: new Headers({
+							authorization: cookies.token,
+						}),
+					});
+				}
+			};
+			check();
+			document.addEventListener('DOMContentLoaded', () => {
+				let loginForm = document.getElementById('loginForm');
+				let errorDiv = document.querySelector('#errorDiv');
+				loginForm.addEventListener('submit', async (action) => {
+					action.preventDefault();
+
+					errorDiv.innerHTML = '';
+					try {
+						const formData = new FormData(loginForm);
+						// console.log(formData.get('login'));
+
+						const res = await fetch('/login', {
+							method: 'POST',
+							body: JSON.stringify({
+								login: formData.get('login'),
+								password: formData.get('password'),
+							}),
+							headers: new Headers({
+								'Content-Type': 'application/json; charset=UTF-8',
+							}),
+						});
+
+						const data = await res.json();
+						// console.log(data);
+						if (data.status === 'success') {
+							document.cookie = `authorization=Bearer ${data.token}`;
+							window.location.href = '/login';
+						} else errorDiv.innerHTML = data.message;
+					} catch (error) {
+						errorDiv.innerHTML = error;
+						console.error('Error:', error);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Login Form</h1>
+		<form id="loginForm" action="/login" method="POST">
+			<label for="login">Login</label>
+			<input type="text" id="login" name="login" required /><br /><br />
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" required /><br /><br />
+
+			<div id="errorDiv" class="errorDiv"></div>
+
+			<input type="submit" value="Login" />
+		</form>
+		<div id="successDiv"></div>
+	</body>
+</html>
