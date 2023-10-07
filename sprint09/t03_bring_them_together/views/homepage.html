@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Home</title>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<h1>Homepage</h1>
+		<div>
+			<p>status: <%= status %></p>
+			<p>email: <%= email %></p>
+			<p>name: <%= name %></p>
+			<p>login: <%= login %></p>
+		</div>
+		<button
+			onclick="document.cookie = 'authorization=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+	window.location.href = '/login';"
+		>
+			log out
+		</button>
+		<button><a href="/reminder">Remind password</a></button>
+	</body>
+</html>

@@ -4,9 +4,7 @@ class Model {
 	constructor(args) {
 		const keys = Object.keys(args);
 		const values = Object.values(args);
-		for (let i = 0; i < keys.length; i++) {
-			this[keys[i]] = `${values[i]}`;
-		}
+		for (let i = 0; i < keys.length; i++) this[keys[i]] = `${values[i]}`;
 	}
 	async find(id) {
 		try {
@@ -38,7 +36,6 @@ class Model {
 			delete updateList.tableName;
 			const columns = Object.keys(updateList).join(', ');
 			const values = Object.values(updateList).map((val) => `'${val}'`);
-
 			if (this.id && this.find(this.id)) {
 				await pool.execute(`UPDATE ${this.tableName} SET ${updateList} WHERE id=${this.id}`);
 			} else {

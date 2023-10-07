@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Log in form</title>
+		<link rel="stylesheet" href="/style.css" />
 		<script>
 			const check = async () => {
+				let cookies = document.cookie;
 				if (cookies.authorization) {
 					const res = await fetch('/login', {
 						method: GET,
@@ -20,11 +22,9 @@
 				let errorDiv = document.querySelector('#errorDiv');
 				loginForm.addEventListener('submit', async (action) => {
 					action.preventDefault();
-
 					errorDiv.innerHTML = '';
 					try {
 						const formData = new FormData(loginForm);
-
 						const res = await fetch('/login', {
 							method: 'POST',
 							body: JSON.stringify({
@@ -35,10 +35,12 @@
 								'Content-Type': 'application/json; charset=UTF-8',
 							}),
 						});
-
 						const data = await res.json();
 						if (data.status === 'success') {
-							document.cookie = `authorization=Bearer ${data.token}`;
+							const expirationDate = new Date(Date.now() + 24 * 60 * 60 * 1000);
+							document.cookie = `authorization=Bearer ${
+								data.token
+							}; expires=${expirationDate.toUTCString()}`;
 							window.location.href = '/login';
 						} else errorDiv.innerHTML = data.message;
 					} catch (error) {
@@ -51,6 +53,7 @@
 	</head>
 	<body>
 		<h1>Login Form</h1>
+		<% if (!header) {%>
 		<form id="loginForm" action="/login" method="POST">
 			<label for="login">Login</label>
 			<input type="text" id="login" name="login" required /><br /><br />
@@ -60,7 +63,12 @@
 			<div id="errorDiv" class="errorDiv"></div>
 
 			<input type="submit" value="Login" />
+			<button><a href="/register">Register</a></button>
 		</form>
 		<div id="successDiv"></div>
+		<%} else {%>
+		<h1><%= header %></h1>
+		<button><a href="/homepage">Homepage</a></button>
+		<%} %>
 	</body>
 </html>
